@@ -1,0 +1,168 @@
+.accordion {
+  display: flex;
+
+  @media (max-width: ($vp-770 - 1px)) {
+    flex-direction: column;
+  }
+}
+
+.accordion__first p,
+.accordion__second p {
+  position: relative;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 21px;
+  font-family: $ff-roboto-condensed;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-white;
+
+  @media (max-width: ($vp-770 - 1px)) {
+    margin-top: 24px;
+    margin-bottom: 18px;
+  }
+}
+
+.accordion__first p::before,
+.accordion__first p::after {
+  display: none;
+
+  @media (max-width: ($vp-770 - 1px)) {
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    content: "";
+    width: 15px;
+    height: 1px;
+    background-color: $color-alice-blue;
+  }
+}
+
+.accordion__first p::after {
+  transform: rotate(90deg);
+}
+
+.accordion__second p::before,
+.accordion__second p::after {
+  display: none;
+
+  @media (max-width: ($vp-770 - 1px)) {
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    content: "";
+    width: 15px;
+    height: 1px;
+    background-color: $color-alice-blue;
+  }
+}
+
+.accordion__second p::after {
+  transform: rotate(90deg);
+}
+
+.accordion__second>.is-close>p::after,
+.accordion__first>.is-close>p::after {
+  @media (max-width: ($vp-770 - 1px)) {
+    display: block;
+  }
+}
+
+.accordion__second>.is-open>p::after,
+.accordion__first>.is-open>p::after {
+  @media (max-width: ($vp-770 - 1px)) {
+    display: none;
+  }
+}
+
+.accordion__first {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  margin-right: 296px;
+
+  @media (max-width: 1320px) {
+    margin-right: 200px;
+  }
+
+  @media (max-width: ($vp-1024 - 1px)) {
+    margin-right: 145px;
+  }
+
+  @media (max-width: ($vp-770 - 1px)) {
+    margin-right: 0;
+    padding: 0 27px 0 25px;
+  }
+}
+
+.accordion__first::before {
+  @media (max-width: ($vp-770 - 1px)) {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $color-white;
+  }
+}
+
+.accordion__second {
+  @media (max-width: ($vp-770 - 1px)) {
+    position: relative;
+    padding: 0 27px 55px 25px;
+  }
+}
+
+.accordion__second::before {
+  @media (max-width: ($vp-770 - 1px)) {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $color-white;
+  }
+}
+
+.accordion__second::after {
+  @media (max-width: ($vp-770 - 1px)) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $color-white;
+  }
+}
+
+.accordion__second {
+  @media (max-width: ($vp-770 - 1px)) {
+    padding: 0 27px 15px 25px;
+  }
+}
+
+.accordion__title {
+  position: relative;
+}
+
+.is-open~[data-ul] {
+  display: flex;
+
+  @media (max-width: ($vp-770 - 1px)) {
+    display: flex;
+  }
+}
+
+.is-close~[data-ul] {
+  display: flex;
+
+  @media (max-width: ($vp-770 - 1px)) {
+    display: none;
+  }
+}

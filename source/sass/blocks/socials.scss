@@ -1,0 +1,39 @@
+.socials {
+  display: flex;
+  margin: 0;
+  margin-left: 15px;
+  padding: 0;
+  gap: 25px;
+  list-style-type: none;
+
+  @media (max-width: ($vp-1024 - 1px)) {
+    margin-left: 5px;
+  }
+}
+
+.socials__item {
+
+  @media (max-width: ($vp-1024 - 1px)) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.socials__link svg {
+  color: $color-alice-blue;
+}
+
+.socials__link:hover,
+.socials__link:focus {
+  outline: none;
+  svg {
+    color: $color-deep-blue-sky;
+  }
+}
+
+.socials__link:active {
+  svg {
+    color: $color-prussian-blue;
+  }
+}
