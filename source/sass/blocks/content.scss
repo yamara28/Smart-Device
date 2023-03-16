@@ -6,7 +6,6 @@
   column-gap: 45px;
   display: flex;
   flex-direction: column;
-  flex-flow: column wrap;
   column-count: 2;
   flex-wrap: wrap;
   height: 140px;
@@ -14,7 +13,6 @@
 
   @media (max-width: ($vp-1024 - 1px)) {
     flex-direction: column;
-    flex-flow: column;
     gap: 5px;
     height: auto;
   }
@@ -31,12 +29,12 @@
 
 .content__link {
   font-family: $ff-pt-mono;
-  font-size: $fz-default;;
+  font-size: $fz-default;
   line-height: 135%;
   color: rgba(255, 255, 255, 0.7);
 
   @media (max-width: ($vp-770 - 1px)) {
-    font-size: $fz-small;;
+    font-size: $fz-small;
   }
 }
 
@@ -49,4 +47,3 @@
 .content__link:active {
   color: $color-prussian-blue;
 }
-

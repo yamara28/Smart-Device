@@ -9,12 +9,12 @@
 
 .contacts__link {
   font-family: $ff-pt-mono;
-  font-size: $fz-default;;
+  font-size: $fz-default;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
 
   @media (max-width: ($vp-770 - 1px)) {
-    font-size: $fz-small;;
+    font-size: $fz-small;
     line-height: 19px;
   }
 }
@@ -33,14 +33,14 @@
   display: block;
   width: 310px;
   font-weight: 400;
-  font-size: $fz-default;;
+  font-size: $fz-default;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
 
   @media (max-width: ($vp-770 - 1px)) {
     width: 270px;
     margin-bottom: 10px;
-    font-size: $fz-small;;
+    font-size: $fz-small;
     line-height: 19px;
   }
 }

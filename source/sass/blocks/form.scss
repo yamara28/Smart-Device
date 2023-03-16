@@ -26,7 +26,7 @@
   }
 }
 
-.form input[type=text] {
+.form input[type="text"] {
   grid-area: name;
   padding: 15px;
 
@@ -35,7 +35,7 @@
   }
 }
 
-.form input[type=tel] {
+.form input[type="tel"] {
   grid-area: phone;
   padding: 15px;
 }
@@ -51,21 +51,6 @@
   @media (max-width: ($vp-770 - 1px)) {
     padding: 24px 15px;
     height: 180px;
-  }
-}
-
-.form .form__button {
-  grid-area: button;
-  justify-self: baseline;
-  align-self: center;
-  margin-top: 17px;
-
-  @media (max-width: ($vp-1024 - 1px)) {
-    margin-top: 15px;
-  }
-
-  @media (max-width: ($vp-770 - 1px)) {
-    margin-top: 9px;
   }
 }
 
@@ -97,7 +82,6 @@
 }
 
 .form input[type="checkbox"] {
-  grid-area: checkbox;
   background-color: transparent;
   border: 1px solid $color-white;
 }
@@ -118,6 +102,7 @@
 }
 
 .form__check {
+  grid-area: checkbox;
   position: relative;
   margin-left: 8px;
   margin-top: 30px;
@@ -147,17 +132,28 @@
   position: relative;
   appearance: none;
   display: block;
-  position: relative;
-  width: 21px;
+  width: 13px;
   height: 15px;
   margin: 0;
   margin-top: 8px;
-  border: 1px solid #fff;
+  border: 1px solid $color-default-white;
   border-radius: 2px;
   cursor: pointer;
 }
 
-input[type="checkbox"]::after {
+.form__check--modal input {
+  margin-top: 2px;
+}
+
+.form__check--modal {
+  margin-top: 0;
+
+  @media (max-width: ($vp-1024 - 1px)) {
+    margin: 0;
+  }
+}
+
+.form input[type="checkbox"]::after {
   position: absolute;
   top: 2px;
   left: 2px;
@@ -168,13 +164,17 @@ input[type="checkbox"]::after {
   transform: rotate(-57deg);
 }
 
-input[type="checkbox"]:checked {
+.form input[type="checkbox"]:checked {
   &::after {
     content: "";
   }
 }
 
-.form__button {
+.form button[type="submit"] {
+  grid-area: button;
+  justify-self: baseline;
+  align-self: center;
+  margin-top: 17px;
   padding: 13px 70px;
   background: $color-black-pearl;
   border: none;
@@ -186,16 +186,24 @@ input[type="checkbox"]:checked {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-white;
+
+  @media (max-width: ($vp-1024 - 1px)) {
+    margin-top: 15px;
+  }
+
+  @media (max-width: ($vp-770 - 1px)) {
+    margin-top: 9px;
+  }
 }
 
-.form__button:hover,
-.form__button:focus {
+.form button[type="submit"]:hover,
+.form button[type="submit"]:focus {
   outline: none;
   padding: 12px 69px;
   background: $color-deep-blue-sky;
   border: 1px solid $color-prussian-blue;
 }
 
-.form__button:active {
+.form button[type="submit"]:active {
   background: $color-prussian-blue;
 }

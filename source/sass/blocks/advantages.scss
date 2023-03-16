@@ -11,9 +11,8 @@
   justify-content: center;
   gap: 30px;
   margin: 0;
-  padding: 0;
+  padding: 97px 40px 90px;
   list-style-type: none;
-  padding: 97px 215px 90px;
 
   @media (max-width: ($vp-1024 - 1px)) {
 
@@ -59,7 +58,6 @@
   }
 }
 
-
 .advantages__item::before {
   position: absolute;
   top: 0;
@@ -69,8 +67,6 @@
   height: 100%;
   background-color: $color-deep-blue-sky;
 }
-
-
 
 .advantages__item:hover {
   background-color: $color-deep-blue-sky;
@@ -90,7 +86,7 @@
 
 .advantages__item svg {
   margin-bottom: 19px;
- color: $color-deep-blue-sky;
+  color: $color-deep-blue-sky;
 
   @media (max-width: ($vp-1024 - 1px)) {
     margin-bottom: 14px;
@@ -147,12 +143,12 @@
 .advantages__item span {
   font-family: $ff-pt-mono;
   font-weight: $fw-default;
-  font-size: $fz-default;;
+  font-size: $fz-default;
   line-height: 22px;
   color: #041827;
 
   @media (max-width: ($vp-770 - 1px)) {
-    font-size: $fz-small;;
+    font-size: $fz-small;
     line-height: 19px;
   }
 }

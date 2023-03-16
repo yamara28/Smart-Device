@@ -1,7 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-// import {initAccordions} from './modules/accordion/init-accordion';
-// import {changeAboutButton} from './modules/accordion/button-text-change';
 import {Form} from './modules/form-validate/form';
 
 // ---------------------------------
@@ -21,17 +19,17 @@ window.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < accordion.length; i++) {
     const accordionTitle = accordion[i];
     accordionTitle.addEventListener('click', () => {
-      if (accordionTitle.classList.contains('is-open')) {
-        accordionTitle.classList.remove('is-open');
-        accordionTitle.classList.add('is-close');
+      if (accordionTitle.classList.contains('is-open-accordion')) {
+        accordionTitle.classList.remove('is-open-accordion');
+        accordionTitle.classList.add('is-close-accordion');
       } else {
-        const accordionTitlesWithIsOpen = document.querySelectorAll('.is-open');
+        const accordionTitlesWithIsOpen = document.querySelectorAll('.is-open-accordion');
         accordionTitlesWithIsOpen.forEach((accordionTitleWithIsOpen) => {
-          accordionTitleWithIsOpen.classList.remove('is-open');
-          accordionTitleWithIsOpen.classList.add('is-close');
+          accordionTitleWithIsOpen.classList.remove('is-open-accordion');
+          accordionTitleWithIsOpen.classList.add('is-close-accordion');
         });
-        accordionTitle.classList.remove('is-close');
-        accordionTitle.classList.add('is-open');
+        accordionTitle.classList.remove('is-close-accordion');
+        accordionTitle.classList.add('is-open-accordion');
       }
     });
   }
@@ -39,40 +37,31 @@ window.addEventListener('DOMContentLoaded', () => {
   // Open more text by clicking button <Подробнее>
   const aboutButton = document.querySelector('[data-button="button"]');
   const aboutWrapper = document.querySelector('[data-about="about-wrapper"]');
-  // const mobileHiddenText = document.querySelector('[data-span="span-visible"]');
-  // const paragraph = document.querySelector('[data-p="paragraph"]');
-  aboutButton.addEventListener('click', () => {
-    if (aboutWrapper.classList.contains('is-show')) {
-      aboutWrapper.classList.remove('is-show');
-      // mobileHiddenText.classList.remove('is-show');
-      // mobileHiddenText.classList.add('is-hide');
-      aboutWrapper.classList.add('is-hide');
+  function onAboutButtonHandler() {
+    if (aboutButton) {
+      aboutButton.addEventListener('click', () => {
+        if (aboutWrapper.classList.contains('is-show-content')) {
+          aboutWrapper.classList.remove('is-show-content');
+          aboutWrapper.classList.add('is-hide-content');
 
-      aboutButton.innerHTML = 'Подробнее';
+          aboutButton.innerHTML = 'Подробнее';
+        } else {
+          aboutWrapper.classList.add('is-show-content');
+          aboutWrapper.classList.remove('is-hide-content');
+          aboutButton.innerHTML = 'Свернуть';
+        }
+      });
     } else {
-      aboutWrapper.classList.add('is-show');
-      // mobileHiddenText.classList.add('is-show');
-      aboutWrapper.classList.remove('is-hide');
-      // mobileHiddenText.classList.remove('is-hide');
-      aboutButton.innerHTML = 'Свернуть';
+      return;
     }
-  });
-
-  //  Close pop-up by clicking outside the modal window
-  const wrapper = document.querySelector('[data-set="modal"]');
-  const modalLayout = document.querySelector('[data-div="modal-layout"]');
-
-  modalLayout.addEventListener('click', () => {
-    wrapper.classList.remove('is-active');
-  });
+  }
+  onAboutButtonHandler();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    // initAccordions();
-    // changeAboutButton();
 
     const form = new Form();
     window.form = form;

@@ -74,7 +74,7 @@
 .connection p {
   margin: 0;
   margin-bottom: 32px;
-  font-size: $fz-default;;
+  font-size: $fz-default;
   line-height: 22px;
   color: $color-white;
 
@@ -84,7 +84,7 @@
 
   @media (max-width: ($vp-770 - 1px)) {
     margin-bottom: 34px;
-    font-size: $fz-small;;
+    font-size: $fz-small;
     line-height: 19px;
   }
 }

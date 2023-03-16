@@ -20,7 +20,7 @@
   }
 }
 
-.header-wrapper {
+.header__wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -59,6 +59,13 @@
   box-shadow: 0 0 8px $color-deep-blue-sky;
 }
 
+.header__logo-image {
+  @media (max-width: ($vp-770 - 1px)) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .header__nav {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +94,7 @@
     max-width: 200px;
     margin: 0;
     margin-left: 14px;
-    font-size: $fz-default;;
+    font-size: $fz-default;
     line-height: 18px;
     color: $color-alice-blue;
 

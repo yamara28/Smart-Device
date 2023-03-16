@@ -1,8 +1,8 @@
-.is-hide [data-p="paragraph"] {
+.is-hide-content [data-p="paragraph"] {
   display: none;
 }
 
-.is-show [data-p="paragraph"] {
+.is-show-content [data-p="paragraph"] {
   display: inline;
 }
 
@@ -12,22 +12,6 @@
   align-items: center;
 }
 
-// .about__wrapper {
-//   display: flex;
-//   padding: 30px 350px 100px 350px;
-
-//   @media (max-width: 1490px) {
-//     padding: 30px 150px 90px 150px;
-//   }
-
-//   @media (max-width: ($vp-1024 - 1px)) {
-//     padding: 54px 46px 80px 45px;
-//   }
-
-//   @media (max-width: ($vp-770 - 1px)) {
-//     padding: 0 24px 80px;
-//   }
-// }
 .about__wrapper {
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -41,13 +25,11 @@
   @media (max-width: ($vp-1024 - 1px)) {
     gap: 30px;
     padding: 54px 46px 80px 45px;
-
   }
 
   @media (max-width: ($vp-770 - 1px)) {
     display: block;
     padding: 0 24px 80px;
-
   }
 }
 
@@ -84,23 +66,24 @@
 }
 
 .about__content p {
-  margin: 0;
+  margin: 0 0 21px 0;
   font-family: $ff-pt-mono;
   font-weight: $fw-default;
   font-size: $fz-default;
-  ;
   line-height: 22px;
   color: $color-black-pearl;
 
   @media (max-width: ($vp-770 - 1px)) {
     font-size: $fz-small;
-    ;
     line-height: 19px;
   }
 }
 
+.about__content p:last-child {
+  margin: 0;
+}
 
-.is-hide [data-span="span-visible"] {
+.is-hide-content [data-span="span-visible"] {
   display: inline;
 
   @media (max-width: ($vp-770 - 1px)) {
@@ -108,25 +91,21 @@
   }
 }
 
-
-.is-show [data-span="span-visible"] {
+.is-show-content [data-span="span-visible"] {
   display: inline;
 
   @media (max-width: ($vp-770 - 1px)) {
-    display: none;
-
     display: inline;
   }
 }
 
 .about__button {
   align-self: flex-start;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 13px 50px 13px 50px;
   font-family: $ff-roboto-condensed;
   font-weight: $fw-bold;
   font-size: $fz-small;
-  ;
   line-height: 16px;
   text-align: center;
   letter-spacing: 0.05em;
@@ -138,23 +117,24 @@
   cursor: pointer;
 
   @media (max-width: ($vp-1024 - 1px)) {
-    margin-top: 13px;
+    margin-top: -6px;
   }
 
   @media (max-width: ($vp-770 - 1px)) {
     padding: 9px 40px;
+    margin-top: -9px;
   }
 }
 
 .about__button:hover,
 .about__button:focus {
   outline: none;
-  background-color: $color-deep-blue-sky ;
+  background-color: $color-deep-blue-sky;
   color: $color-alice-blue;
 }
 
 .about__button:active {
-  background-color: $color-prussian-blue ;
+  background-color: $color-prussian-blue;
   border: 1px solid $color-prussian-blue;
   color: $color-alice-blue;
 }

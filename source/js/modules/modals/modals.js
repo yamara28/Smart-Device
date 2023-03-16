@@ -91,7 +91,7 @@ export class Modals {
 
     if (isEscKey) {
       evt.preventDefault();
-      this.close(document.querySelector('.modal.is-active').dataset.modal);
+      this.close(document.querySelector('.modal.is-active-modal').dataset.modal);
     }
   }
 
@@ -136,13 +136,13 @@ export class Modals {
   open(modalName = this._modalName) {
     const modal = document.querySelector(`[data-modal="${modalName}"]`);
 
-    if (!modal || modal.classList.contains('is-active')) {
+    if (!modal || modal.classList.contains('is-active-modal')) {
       return;
     }
 
     document.removeEventListener('click', this._documentClickHandler);
 
-    this._openedModalElement = document.querySelector('.modal.is-active');
+    this._openedModalElement = document.querySelector('.modal.is-active-modal');
 
     if (this._openedModalElement) {
       this._enableScrolling = false;
@@ -150,7 +150,7 @@ export class Modals {
     }
 
     this._setSettings(modalName);
-    modal.classList.add('is-active');
+    modal.classList.add('is-active-modal');
 
     if (!this._openedModalElement) {
       this._scrollLock.disableScrolling();
@@ -161,7 +161,7 @@ export class Modals {
     }
 
     if (this._lockFocus) {
-      this._focusLock.lock('.modal.is-active', this._startFocus);
+      this._focusLock.lock('.modal.is-active-modal', this._startFocus);
     }
 
     setTimeout(() => {
@@ -175,7 +175,7 @@ export class Modals {
     const modal = document.querySelector(`[data-modal="${modalName}"]`);
     document.removeEventListener('click', this._documentClickHandler);
 
-    if (!modal || !modal.classList.contains('is-active')) {
+    if (!modal || !modal.classList.contains('is-active-modal')) {
       return;
     }
 
@@ -183,7 +183,7 @@ export class Modals {
       this._focusLock.unlock(this._focusBack);
     }
 
-    modal.classList.remove('is-active');
+    modal.classList.remove('is-active-modal');
     this._removeListeners(modal);
     this._stopInteractive(modal);
 

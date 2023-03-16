@@ -12,7 +12,6 @@
 }
 
 .socials__item {
-
   @media (max-width: ($vp-1024 - 1px)) {
     display: flex;
     justify-content: center;
@@ -27,6 +26,7 @@
 .socials__link:hover,
 .socials__link:focus {
   outline: none;
+
   svg {
     color: $color-deep-blue-sky;
   }
