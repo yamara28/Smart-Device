@@ -19,17 +19,17 @@ window.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < accordion.length; i++) {
     const accordionTitle = accordion[i];
     accordionTitle.addEventListener('click', () => {
-      if (accordionTitle.classList.contains('is-open-accordion')) {
-        accordionTitle.classList.remove('is-open-accordion');
-        accordionTitle.classList.add('is-close-accordion');
+      if (accordionTitle.classList.contains('is-open')) {
+        accordionTitle.classList.remove('is-open');
+        accordionTitle.classList.add('is-close');
       } else {
-        const accordionTitlesWithIsOpen = document.querySelectorAll('.is-open-accordion');
+        const accordionTitlesWithIsOpen = document.querySelectorAll('.is-open');
         accordionTitlesWithIsOpen.forEach((accordionTitleWithIsOpen) => {
-          accordionTitleWithIsOpen.classList.remove('is-open-accordion');
-          accordionTitleWithIsOpen.classList.add('is-close-accordion');
+          accordionTitleWithIsOpen.classList.remove('is-open');
+          accordionTitleWithIsOpen.classList.add('is-close');
         });
-        accordionTitle.classList.remove('is-close-accordion');
-        accordionTitle.classList.add('is-open-accordion');
+        accordionTitle.classList.remove('is-close');
+        accordionTitle.classList.add('is-open');
       }
     });
   }
@@ -40,14 +40,14 @@ window.addEventListener('DOMContentLoaded', () => {
   function onAboutButtonHandler() {
     if (aboutButton) {
       aboutButton.addEventListener('click', () => {
-        if (aboutWrapper.classList.contains('is-show-content')) {
-          aboutWrapper.classList.remove('is-show-content');
-          aboutWrapper.classList.add('is-hide-content');
+        if (aboutWrapper.classList.contains('is-show')) {
+          aboutWrapper.classList.remove('is-show');
+          aboutWrapper.classList.add('is-hide');
 
           aboutButton.innerHTML = 'Подробнее';
         } else {
-          aboutWrapper.classList.add('is-show-content');
-          aboutWrapper.classList.remove('is-hide-content');
+          aboutWrapper.classList.add('is-show');
+          aboutWrapper.classList.remove('is-hide');
           aboutButton.innerHTML = 'Свернуть';
         }
       });

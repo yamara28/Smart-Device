@@ -39,11 +39,11 @@
   }
 }
 
-.is-active-modal {
+.modal.is-active {
   display: flex;
 }
 
-.is-active-modal > .modal__container {
+.modal.is-active > .modal__container {
   display: flex;
 }
 

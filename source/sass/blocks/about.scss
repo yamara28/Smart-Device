@@ -1,8 +1,8 @@
-.is-hide-content [data-p="paragraph"] {
+[data-about="about-wrapper"].is-hide [data-p="paragraph"] {
   display: none;
 }
 
-.is-show-content [data-p="paragraph"] {
+[data-about="about-wrapper"].is-show [data-p="paragraph"] {
   display: inline;
 }
 
@@ -83,7 +83,7 @@
   margin: 0;
 }
 
-.is-hide-content [data-span="span-visible"] {
+[data-about="about-wrapper"].is-hide [data-span="span-visible"] {
   display: inline;
 
   @media (max-width: ($vp-770 - 1px)) {
@@ -91,7 +91,7 @@
   }
 }
 
-.is-show-content [data-span="span-visible"] {
+[data-about="about-wrapper"].is-show [data-span="span-visible"] {
   display: inline;
 
   @media (max-width: ($vp-770 - 1px)) {
