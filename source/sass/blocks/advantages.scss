@@ -2,6 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  padding: 97px 40px 90px;
+
+  @media (max-width: ($vp-1024 - 1px)) {
+    padding: 3px 42px 20px 43px;
+  }
+
+  @media (max-width: ($vp-768 - 1px)) {
+    padding: 13px 24px 47px;
+  }
 }
 
 .advantages__list {
@@ -11,17 +21,22 @@
   justify-content: center;
   gap: 30px;
   margin: 0;
-  padding: 97px 40px 90px;
+  padding: 0;
+  width: 1230px;
   list-style-type: none;
 
-  @media (max-width: ($vp-1024 - 1px)) {
-
-    padding: 3px 50px 20px 49px;
+  @media (max-width: 1300px) {
+  column-gap: 130px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-1024 - 1px)) {
+    gap: 30px;
+    width: 670px;
+  }
+
+  @media (max-width: ($vp-768 - 1px)) {
     flex-direction: column;
-    padding: 13px 24px 47px;
+    width: 270px;
   }
 }
 
@@ -34,13 +49,19 @@
   padding: 40px 45px 67px;
   border: 1px solid rgb(235, 235, 235);
 
+  @media (max-width: 1300px) {
+    width: 320px;
+    min-height: 360px;
+    padding: 37px 43px 30px;
+  }
+
   @media (max-width: ($vp-1024 - 1px)) {
     width: 320px;
     min-height: 360px;
     padding: 37px 43px 30px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     width: 270px;
     min-height: 325px;
     max-height: 340px;
@@ -53,7 +74,7 @@
     padding: 37px 44px 30px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     padding: 31px 30px 52px;
   }
 }
@@ -92,7 +113,7 @@
     margin-bottom: 14px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     margin-bottom: 17px;
     width: 30px;
     height: 30px;
@@ -104,7 +125,7 @@
     margin-bottom: 14px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     margin-bottom: 16px;
   }
 }
@@ -123,7 +144,7 @@
     margin-bottom: 9px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     margin-bottom: 12px;
     font-size: 20px;
     line-height: 28px;
@@ -135,7 +156,7 @@
     margin-bottom: 2px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     margin-bottom: 14px;
   }
 }
@@ -147,7 +168,7 @@
   line-height: 22px;
   color: #041827;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     font-size: $fz-small;
     line-height: 19px;
   }

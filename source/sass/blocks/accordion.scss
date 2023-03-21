@@ -1,7 +1,7 @@
 .accordion {
   display: flex;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     flex-direction: column;
   }
 }
@@ -19,7 +19,7 @@
   text-transform: uppercase;
   color: $color-white;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     margin-top: 24px;
     margin-bottom: 18px;
   }
@@ -29,7 +29,7 @@
 .accordion__first p::after {
   display: none;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     display: block;
     position: absolute;
     top: 25%;
@@ -49,7 +49,7 @@
 .accordion__second p::after {
   display: none;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     display: block;
     position: absolute;
     top: 40%;
@@ -67,14 +67,14 @@
 
 .accordion__second > [data-div="accordion__title"].is-close > p::after,
 .accordion__first > [data-div="accordion__title"].is-close > p::after {
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     display: block;
   }
 }
 
 .accordion__second > [data-div="accordion__title"].is-open > p::after,
 .accordion__first > [data-div="accordion__title"].is-open > p::after {
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     display: none;
   }
 }
@@ -83,24 +83,31 @@
   position: relative;
   display: flex;
   flex-flow: column;
-  margin-right: 296px;
+  margin-right: 45px;
 
-  @media (max-width: 1320px) {
-    margin-right: 200px;
-  }
+  // @media (max-width: 1320px) {
+  //   margin-right: 200px;
+  // }
 
   @media (max-width: ($vp-1024 - 1px)) {
     margin-right: 145px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     margin-right: 0;
     padding: 0 27px 0 25px;
   }
 }
 
+.accordion__first li:last-child::after {
+  content: "";
+  width: 100%;
+  height: 25px;
+  display: list-item;
+}
+
 .accordion__first::before {
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     position: absolute;
     left: 0;
     content: "";
@@ -111,14 +118,14 @@
 }
 
 .accordion__second {
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     position: relative;
     padding: 0 27px 14px 25px;
   }
 }
 
 .accordion__second::before {
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     position: absolute;
     left: 0;
     top: 3px;
@@ -130,7 +137,7 @@
 }
 
 .accordion__second::after {
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -146,17 +153,17 @@
 }
 
 [data-div="accordion__title"].is-open ~ [data-ul] {
-  display: flex;
+  display: block;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     display: flex;
   }
 }
 
 [data-div="accordion__title"].is-close ~ [data-ul] {
-  display: flex;
+  display: block;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     display: none;
   }
 }

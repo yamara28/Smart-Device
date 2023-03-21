@@ -10,12 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.about__wrapper {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 100px;
+  width: 100%;
   padding: 30px 350px 100px 350px;
 
   @media (max-width: 1490px) {
@@ -23,13 +18,33 @@
   }
 
   @media (max-width: ($vp-1024 - 1px)) {
-    gap: 30px;
     padding: 54px 46px 80px 45px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
-    display: block;
+  @media (max-width: ($vp-768 - 1px)) {
     padding: 0 24px 80px;
+  }
+}
+
+.about__wrapper {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 100px;
+  width: 1220px;
+
+  // @media (max-width: 1490px) {
+  //   padding: 30px 150px 90px 150px;
+  // }
+
+  @media (max-width: ($vp-1024 - 1px)) {
+    width: 670px;
+    gap: 27px;
+    // padding: 54px 46px 80px 45px;
+  }
+
+  @media (max-width: ($vp-768 - 1px)) {
+    display: block;
+    width: 270px;
   }
 }
 
@@ -40,7 +55,7 @@
     margin-top: 2px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     display: none;
   }
 }
@@ -59,7 +74,7 @@
   line-height: 51px;
   color: $color-black-pearl;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     font-size: 28px;
     line-height: 39px;
   }
@@ -73,7 +88,7 @@
   line-height: 22px;
   color: $color-black-pearl;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     font-size: $fz-small;
     line-height: 19px;
   }
@@ -86,7 +101,7 @@
 [data-about="about-wrapper"].is-hide [data-span="span-visible"] {
   display: inline;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     display: none;
   }
 }
@@ -94,7 +109,7 @@
 [data-about="about-wrapper"].is-show [data-span="span-visible"] {
   display: inline;
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     display: inline;
   }
 }
@@ -120,13 +135,22 @@
     margin-top: -6px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     padding: 9px 40px;
     margin-top: -9px;
   }
 }
 
-.about__button:hover,
+@media (hover:hover) {
+
+.about__button:hover {
+  outline: none;
+  background-color: $color-deep-blue-sky;
+  color: $color-alice-blue;
+}
+
+}
+
 .about__button:focus {
   outline: none;
   background-color: $color-deep-blue-sky;

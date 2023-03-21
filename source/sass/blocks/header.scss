@@ -6,17 +6,18 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 100%;
   padding: 28px 50px 36px;
   background: linear-gradient(180deg, $color-black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);
 
   @media (max-width: ($vp-1024 - 1px)) {
     position: static;
     display: block;
-    padding: 20px 80px 25px 50px;
+    padding: 20px 80px 21px 50px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
-    padding: 15px 45px 20px 25px;
+  @media (max-width: ($vp-768 - 1px)) {
+    padding: 15px 45px 20px 26px;
   }
 }
 
@@ -25,7 +26,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 150px;
+  column-gap: 150px;
   margin-right: 60px;
 
   @media (max-width: 1340px) {
@@ -60,7 +61,11 @@
 }
 
 .header__logo-image {
-  @media (max-width: ($vp-770 - 1px)) {
+
+  @media (max-width: ($vp-1024 - 1px)) {
+  }
+
+  @media (max-width: ($vp-768 - 1px)) {
     width: 35px;
     height: 35px;
   }
@@ -69,12 +74,14 @@
 .header__nav {
   display: flex;
   flex-wrap: wrap;
+  max-width: 540px;
+  row-gap: 5px;
 
   @media (max-width: ($vp-1024 - 1px)) {
     margin-top: 10px;
   }
 
-  @media (max-width: ($vp-770 - 1px)) {
+  @media (max-width: ($vp-768 - 1px)) {
     margin-top: 6px;
   }
 }
@@ -104,28 +111,33 @@
   }
 }
 
-.header__link:hover,
-.header__link:focus {
-  outline: none;
-  box-shadow: 0 0 8px $color-deep-blue-sky;
+@media (hover: hover) {
+  // &:hover:not(.focus-visible) {
+    .header__link:hover ,
+    .header__link:focus {
+      outline: none;
+      box-shadow: 0 0 8px $color-deep-blue-sky;
 
-  p {
-    color: $color-deep-blue-sky;
-  }
-}
+      p {
+        color: $color-deep-blue-sky;
+      }
+    }
 
-.header__link:active {
-  outline: none;
-  box-shadow: 0 0 8px $color-deep-blue-sky;
+    .header__link:active {
+      outline: none;
+      box-shadow: 0 0 8px $color-deep-blue-sky;
 
-  p {
-    color: $color-prussian-blue;
-  }
+      p {
+        color: $color-prussian-blue;
+      }
 
-  path {
-    fill: $color-prussian-blue;
-  }
-}
+      path {
+        fill: $color-prussian-blue;
+      }
+    }  }
+// }
+
+
 
 .header__link:last-child {
   margin-right: 0;

@@ -20,12 +20,13 @@
 </head>
 
 <body>
+  <div class="wrapper">
   <header class="header">
     <div class="header__wrapper">
       <a class="header__logo" href="#">
         <div class="header__logo-image">
           <picture>
-            <source media="(max-width:769px)" srcset="img/svg/logo_mobile.svg">
+            <source media="(max-width:767px)" srcset="img/svg/logo_mobile.svg">
             <img src="img/svg/logo.svg" alt="Логотип." width="215" height="55">
           </picture>
         </div>
@@ -52,12 +53,12 @@
   <main class="main">
     <section class="main__main-screen main-screen">
       <picture>
-        <source type="image/webp" media="(max-width: 769px)"
+        <source type="image/webp" media="(max-width: 768px)"
           srcset="img/main/main_mobile.webp 1x, img/main/main_mobile@2x.webp 2x">
         <source type="image/webp" media="(max-width: 1024px)"
           srcset="img/main/main_tablet.webp 1x, img/main/main_tablet@2x.webp 2x">
         <source type="image/webp" srcset="img/main/main_desktop.webp 1x, img/main/main_desktop@2x.webp 2x">
-        <source media="(max-width:769px)" srcset="img/main/main_mobile.jpg 1x, img/main/main_mobile@2x.jpg 2x">
+        <source media="(max-width:768px)" srcset="img/main/main_mobile.jpg 1x, img/main/main_mobile@2x.jpg 2x">
         <source media="(max-width:1024px)" srcset="img/main/main_tablet.jpg 1x, img/main/main_tablet@2x.jpg 2x">
         <img class="main-screen__image" src="img/main/main_desktop.jpg" srcset="img/main/main_desktop@2x.jpg 2x"
           alt="Платы." width="1920" height="880">
@@ -153,15 +154,15 @@
               <p>Производство печатных плат</p>
               <div class="services__image">
                 <picture>
-                  <source type="image/webp" media="(max-width: 769px)"
+                  <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/catalog/produce_mobile.webp 1x,  img/catalog/produce_mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1024px)"
+                  <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/catalog/produce_tablet.webp 1x, img/catalog/produce_tablet@2x.webp 2x">
                   <source type="image/webp"
                     srcset="img/catalog/produce_desktop.webp 1x, img/catalog/produce_desktop@2x.webp 2x">
-                  <source media="(max-width:769px)"
+                  <source media="(max-width:767px)"
                     srcset="img/catalog/produce_mobile.jpg 1x, img/catalog/produce_mobile@2x.jpg 2x">
-                  <source media="(max-width:1024px)"
+                  <source media="(max-width:1023px)"
                     srcset="img/catalog/produce_tablet.jpg 1x, img/catalog/produce_tablet@2x.jpg 2x">
                   <img src="img/catalog/produce_desktop.jpg" srcset="img/catalog/produce_desktop@2x.jpg 2x" alt="Платы."
                     width="350" height="650">
@@ -179,15 +180,15 @@
               <p>Монтаж печатных плат</p>
               <div class="services__image">
                 <picture>
-                  <source type="image/webp" media="(max-width: 769px)"
+                  <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/catalog/instal_mobile.webp 1x,  img/catalog/instal_mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1024px)"
+                  <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/catalog/instal_tablet.webp 1x, img/catalog/instal_tablet@2x.webp 2x">
                   <source type="image/webp"
                     srcset="img/catalog/instal_desktop.webp 1x, img/catalog/instal_desktop@2x.webp 2x">
-                  <source media="(max-width:769px)"
+                  <source media="(max-width:767px)"
                     srcset="img/catalog/instal_mobile.jpg 1x, img/catalog/instal_mobile@2x.jpg 2x">
-                  <source media="(max-width:1024px)"
+                  <source media="(max-width:1023px)"
                     srcset="img/catalog/instal_tablet.jpg 1x, img/catalog/instal_tablet@2x.jpg 2x">
                   <img src="img/catalog/instal_desktop.jpg" srcset="img/catalog/instal_desktop@2x.jpg 2x" alt="Платы."
                     width="350" height="650">
@@ -205,15 +206,15 @@
               <p>Комплектующие для светотехники</p>
               <div class="services__image">
                 <picture>
-                  <source type="image/webp" media="(max-width: 769px)"
+                  <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/catalog/parts_mobile.webp 1x,  img/catalog/parts_mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1024px)"
+                  <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/catalog/parts_tablet.webp 1x, img/catalog/parts_tablet@2x.webp 2x">
                   <source type="image/webp"
                     srcset="img/catalog/parts_desktop.webp 1x, img/catalog/parts_desktop@2x.webp 2x">
-                  <source media="(max-width:769px)"
+                  <source media="(max-width:767px)"
                     srcset="img/catalog/parts_mobile.jpg 1x, img/catalog/parts_mobile@2x.jpg 2x">
-                  <source media="(max-width:1024px)"
+                  <source media="(max-width:1023px)"
                     srcset="img/catalog/parts_tablet.jpg 1x, img/catalog/parts_tablet@2x.jpg 2x">
                   <img src="img/catalog/parts_desktop.jpg" srcset="img/catalog/parts_desktop@2x.jpg 2x" alt="Платы."
                     width="350" height="650">
@@ -246,11 +247,10 @@
               <input type="text" id="name" placeholder="Имя" name="name" required>
               <span class="visually-hidden">Введите Ваше имя</span>
             </label>
-
             <label for="phone" data-validate-type="phone" data-required
               data-message-base="Поле обязательно к заполнению" data-phone-length="18">
-              <input type="tel" id="phone" placeholder="Телефон" name="phone" required>
               <span class="visually-hidden">Введите Ваш телефон</span>
+              <input type="tel" id="phone" placeholder="Телефон" name="phone" required>
             </label>
             <label class="visually-hidden" for="question">
               Введите Ваш вопрос
@@ -352,6 +352,7 @@
       </div>
     </div>
   </footer>
+  </div>
   <div class="modal" data-set="modal" data-modal="modal">
     <div class="modal__container " data-div="modal-window">
       <div class="modal__wrapper" data-form-validate>
@@ -379,13 +380,14 @@
               Введите Ваш вопрос
             </label>
             <textarea id="question-modal" name="question" placeholder="Ваш вопрос"></textarea>
-            <button type="submit">Отправить</button>
+
             <div class="form__check form__check--modal">
               <label for="agreement-modal" data-required data-validate-type="checkbox">
                 <input type="checkbox" id="agreement-modal" name="checkbox" required checked>
                 <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
               </label>
             </div>
+            <button type="submit">Отправить</button>
           </form>
         </div>
       </div>
