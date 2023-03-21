@@ -85,10 +85,6 @@
   flex-flow: column;
   margin-right: 45px;
 
-  // @media (max-width: 1320px) {
-  //   margin-right: 200px;
-  // }
-
   @media (max-width: ($vp-1024 - 1px)) {
     margin-right: 145px;
   }

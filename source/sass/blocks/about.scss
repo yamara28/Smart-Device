@@ -30,21 +30,14 @@
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: 100px;
-  width: 1220px;
-
-  // @media (max-width: 1490px) {
-  //   padding: 30px 150px 90px 150px;
-  // }
+  max-width: calc(1920px - 600px);
 
   @media (max-width: ($vp-1024 - 1px)) {
-    width: 670px;
     gap: 27px;
-    // padding: 54px 46px 80px 45px;
   }
 
   @media (max-width: ($vp-768 - 1px)) {
     display: block;
-    width: 270px;
   }
 }
 
@@ -141,19 +134,17 @@
   }
 }
 
-@media (hover:hover) {
-
-.about__button:hover {
-  outline: none;
-  background-color: $color-deep-blue-sky;
-  color: $color-alice-blue;
+@media (hover: hover) {
+  .about__button:hover {
+    outline: none;
+    background-color: $color-deep-blue-sky;
+    color: $color-alice-blue;
+  }
 }
 
-}
-
-.about__button:focus {
+.about__button:focus-visible {
   outline: none;
-  background-color: $color-deep-blue-sky;
+  background-color: $color-neon-blue;
   color: $color-alice-blue;
 }
 

@@ -19,7 +19,7 @@
   <link rel="icon" href="./img/favicon/favicon.ico" type="image/svg+xml">
 </head>
 
-<body>
+<body >
   <div class="wrapper">
   <header class="header">
     <div class="header__wrapper">
@@ -256,13 +256,13 @@
               Введите Ваш вопрос
             </label>
             <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
-            <button type="submit">Задать вопрос</button>
             <div class="form__check">
               <label for="agreement" data-required data-validate-type="checkbox">
                 <input type="checkbox" id="agreement" name="checkbox" required checked>
                 <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
               </label>
             </div>
+            <button type="submit">Задать вопрос</button>
           </form>
         </div>
       </div>
@@ -354,12 +354,9 @@
   </footer>
   </div>
   <div class="modal" data-set="modal" data-modal="modal">
-    <div class="modal__container " data-div="modal-window">
+    <div class="modal__container" data-div="modal-window">
       <div class="modal__wrapper" data-form-validate>
         <button class="modal__close" type="button" data-button="button-close" data-close-modal>
-          <svg width="20" height="20">
-            <use href="./img/sprite.svg#croos_button"></use>
-          </svg>
           <span class="visually-hidden">Закрыть модальное окно</span>
         </button>
         <div class="form">
@@ -392,8 +389,7 @@
         </div>
       </div>
     </div>
-    <div class="modal__layout" data-div="modal-layout">
-    </div>
+    <div class="modal__layout" data-div="modal-layout" data-close-modal></div>
   </div>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

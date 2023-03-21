@@ -22,14 +22,6 @@
   }
 
   @media (max-width: ($vp-768 - 1px)) {
-    // grid-template-areas:
-    // "name"
-    // "phone"
-    // "question"
-    // "button"
-    // "checkbox";
-    // grid-template-columns: 1fr;
-
     display: flex;
     flex-direction: column;
   }
@@ -122,6 +114,7 @@
   }
 
   @media (max-width: ($vp-768 - 1px)) {
+    order: 3;
     margin-left: 2px;
     margin-top: 4px;
   }
@@ -207,11 +200,19 @@
   }
 }
 
-.form button[type="submit"]:hover,
-.form button[type="submit"]:focus {
+@media (hover: hover) {
+  .form button[type="submit"]:hover {
+    outline: none;
+    padding: 12px 69px;
+    background: $color-deep-blue-sky;
+    border: 1px solid $color-prussian-blue;
+  }
+}
+
+.form button[type="submit"]:focus-visible {
   outline: none;
   padding: 12px 69px;
-  background: $color-deep-blue-sky;
+  background: $color-neon-blue;
   border: 1px solid $color-prussian-blue;
 }
 

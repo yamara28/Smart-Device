@@ -42,10 +42,6 @@
   @media (max-width: 1220px) {
     gap: 0;
   }
-
-  @media (max-width: ($vp-1024 - 1px)) {
-    // width: auto;
-  }
 }
 
 .connection__image {

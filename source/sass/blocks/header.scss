@@ -49,10 +49,16 @@
   }
 }
 
-.header__logo:hover,
-.header__logo:focus {
+@media (hover: hover) {
+  .header__logo:hover {
+    outline: none;
+    box-shadow: 0 0 8px $color-deep-blue-sky;
+  }
+}
+
+.header__logo:focus-visible {
   outline: none;
-  box-shadow: 0 0 8px $color-deep-blue-sky;
+  box-shadow: 0 0 8px $color-neon-blue;
 }
 
 .header__logo:active {
@@ -61,10 +67,6 @@
 }
 
 .header__logo-image {
-
-  @media (max-width: ($vp-1024 - 1px)) {
-  }
-
   @media (max-width: ($vp-768 - 1px)) {
     width: 35px;
     height: 35px;
@@ -112,32 +114,37 @@
 }
 
 @media (hover: hover) {
-  // &:hover:not(.focus-visible) {
-    .header__link:hover ,
-    .header__link:focus {
-      outline: none;
-      box-shadow: 0 0 8px $color-deep-blue-sky;
+  .header__link:hover {
+    outline: none;
+    box-shadow: 0 0 8px $color-deep-blue-sky;
 
-      p {
-        color: $color-deep-blue-sky;
-      }
+    p {
+      color: $color-deep-blue-sky;
     }
+  }
+}
 
-    .header__link:active {
-      outline: none;
-      box-shadow: 0 0 8px $color-deep-blue-sky;
+.header__link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 8px $color-deep-blue-sky;
 
-      p {
-        color: $color-prussian-blue;
-      }
+  p {
+    color: $color-deep-blue-sky;
+  }
+}
 
-      path {
-        fill: $color-prussian-blue;
-      }
-    }  }
-// }
+.header__link:active {
+  outline: none;
+  box-shadow: 0 0 8px $color-deep-blue-sky;
 
+  p {
+    color: $color-prussian-blue;
+  }
 
+  path {
+    fill: $color-prussian-blue;
+  }
+}
 
 .header__link:last-child {
   margin-right: 0;
@@ -169,8 +176,15 @@
   }
 }
 
-.header__button:hover,
-.header__button:focus {
+@media (hover: hover) {
+  .header__button:hover {
+    outline: none;
+    color: $color-deep-blue-sky;
+    border: 1px solid $color-deep-blue-sky;
+  }
+}
+
+.header__button:focus-visible {
   outline: none;
   color: $color-deep-blue-sky;
   border: 1px solid $color-deep-blue-sky;

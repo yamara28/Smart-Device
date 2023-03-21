@@ -19,10 +19,16 @@
   }
 }
 
-.contacts__link:hover,
-.contacts__link:focus {
+@media (hover: hover) {
+  .contacts__link:hover {
+    outline: none;
+    color: $color-deep-blue-sky;
+  }
+}
+
+.contacts__link:focus-visible {
   outline: none;
-  color: $color-deep-blue-sky;
+  color: $color-neon-blue;
 }
 
 .contacts__link:active {
@@ -33,7 +39,7 @@
   margin-bottom: 6px;
 
   @media (max-width: ($vp-768 - 1px)) {
-   margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
 

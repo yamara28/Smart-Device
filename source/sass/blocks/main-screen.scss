@@ -41,7 +41,6 @@
 .main-screen__wrapper {
   position: relative;
   z-index: 1;
-
   padding: 185px 375px 317px 125px;
 
   @media (max-width: 1250px) {
@@ -122,10 +121,18 @@
   cursor: pointer;
 }
 
-.main-screen__button:hover,
-.main-screen__button:focus {
+@media (hover: hover) {
+  .main-screen__button:hover {
+    outline: none;
+    box-shadow: 0 0 8px $color-deep-blue-sky;
+    color: $color-deep-blue-sky;
+    background-color: $color-alice-blue;
+  }
+}
+
+.main-screen__button:focus-visible {
   outline: none;
-  box-shadow: 0 0 8px $color-deep-blue-sky;
+  box-shadow: 0 0 8px $color-neon-blue;
   color: $color-deep-blue-sky;
   background-color: $color-alice-blue;
 }

@@ -27,20 +27,11 @@
 .footer__wrapper {
   display: flex;
   margin-left: -35px;
-  // width: 1220px;
-  // align-items: center;
-  // justify-content: center;
 
   @media (max-width: ($vp-1024 - 1px)) {
     flex-direction: column;
     margin: 0;
-    // width: 670px;
   }
-
-  @media (max-width: ($vp-768 - 1px)) {
-    // width: 270px;
-  }
-
 }
 
 .footer__links-wrapper {
